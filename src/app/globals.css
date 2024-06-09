@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.mheading {
+  font-family: cursive;
+}
+
+.bcolor {
+  background: linear-gradient(45deg, #084643, #1a0f0f);
+}
+
+.scolor {
+  background: linear-gradient(45deg, #fde1e1, #559c2a);
+}
