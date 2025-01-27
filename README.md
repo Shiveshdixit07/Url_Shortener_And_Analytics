@@ -22,7 +22,7 @@ The **URL Shortener and Analytics** project is a powerful web application built 
 ## Getting Started
 ### Prerequisites
 Ensure you have the following installed:
-- [Node.js](https://nodejs.org/) (v16 or later)
+- [Node.js](https://nodejs.org/) (v18 or later)
 - [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account for database setup
 
 ### Installation
