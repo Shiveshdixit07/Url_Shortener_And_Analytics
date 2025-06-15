@@ -6,7 +6,6 @@ export default function Home() {
   const [error, setError] = useState("");
   const [selectedOption, setSelectedOption] = useState(null);
 
-  // These would typically come from your API/database
   const facts = [
     {
       number: new Date().getFullYear() - 1994,
@@ -32,9 +31,7 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 text-white px-4 py-8 relative overflow-hidden font-sans">
-      {/* Background Decorative Elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* URL Chain Pattern */}
         <div className="absolute top-0 left-0 w-full h-full opacity-5">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="chain-pattern" x="0" y="0" width="50" height="50" patternUnits="userSpaceOnUse">
@@ -45,7 +42,6 @@ export default function Home() {
           </svg>
         </div>
         
-        {/* Analytics Graph Pattern */}
         <div className="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-5">
           <svg width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M0,80 L20,60 L40,70 L60,30 L80,50 L100,20" stroke="currentColor" strokeWidth="2" fill="none"/>
@@ -53,7 +49,6 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* Connection Nodes */}
         <div className="absolute top-1/4 left-1/4 w-1/2 h-1/2 opacity-5">
           <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
             <pattern id="node-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
@@ -64,7 +59,6 @@ export default function Home() {
           </svg>
         </div>
 
-        {/* Floating Data Points */}
         <div className="absolute inset-0 opacity-10">
           <div className="relative w-full h-full">
             <div className="absolute top-1/4 left-1/4 animate-pulse">
@@ -82,7 +76,6 @@ export default function Home() {
 
       {/* Main Content */}
       <div className="relative max-w-6xl mx-auto">
-        {/* Hero Section */}
         <div className="relative">
           <h1 className="font-bold text-3xl md:text-4xl lg:text-5xl text-center pt-8 font-serif bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-500 tracking-tight leading-tight">
             URL Shortener & Analytics
@@ -94,7 +87,6 @@ export default function Home() {
           </p>
         </div>
 
-        {/* Selection Section */}
         {!selectedOption && (
           <div className="mt-12 bg-white/10 backdrop-blur-lg rounded-xl p-8 shadow-2xl">
             <h2 className="text-2xl md:text-3xl font-bold text-center text-white mb-6 tracking-tight">
@@ -227,36 +219,41 @@ export default function Home() {
         )}
 
         {/* Features Grid */}
-        <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
-            <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
-                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-              </svg>
+        <div className="mt-16">
+          <h2 className="text-2xl md:text-3xl text-center font-bold mb-8 tracking-tight">
+            Key Features
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
+              <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Social Media Friendly</h3>
+              <p className="text-gray-400">Perfect for Twitter's character limit and other social platforms. Share your content efficiently.</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Social Media Friendly</h3>
-            <p className="text-gray-400">Perfect for Twitter's character limit and other social platforms. Share your content efficiently.</p>
-          </div>
 
-          <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
-            <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clipRule="evenodd" />
-              </svg>
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
+              <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11 4a1 1 0 10-2 0v4a1 1 0 102 0V7zm-3 1a1 1 0 10-2 0v3a1 1 0 102 0V8zM8 9a1 1 0 00-2 0v2a1 1 0 102 0V9z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">Detailed Analytics</h3>
+              <p className="text-gray-400">Provides analytics features to track URL visit counts, last visit date, and complete URL visit history.</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Detailed Analytics</h3>
-            <p className="text-gray-400">Track clicks, locations, devices, and referral sources. Make data-driven decisions.</p>
-          </div>
 
-          <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
-            <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
-              <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
-                <path fillRule="evenodd" d="M2.166 4.999A11.954 11.954 0 0010 1.944 11.954 11.954 0 0017.834 5c.11.65.166 1.32.166 2.001 0 5.225-3.34 9.67-8 11.317C5.34 16.67 2 12.225 2 7c0-.682.057-1.35.166-2.001zm11.541 3.708a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-              </svg>
+            <div className="bg-white/5 backdrop-blur-sm p-6 rounded-lg hover:bg-white/10 transition duration-300">
+              <div className="h-12 w-12 bg-indigo-500/10 rounded-lg flex items-center justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-indigo-400" viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-semibold mb-2">User Friendly</h3>
+              <p className="text-gray-400">Intuitive interface with easy-to-use features, making URL shortening and analytics accessible to everyone.</p>
             </div>
-            <h3 className="text-xl font-semibold mb-2">Secure & Reliable</h3>
-            <p className="text-gray-400">All links are encrypted and monitored for suspicious activity. 99.9% uptime guaranteed.</p>
           </div>
         </div>
 

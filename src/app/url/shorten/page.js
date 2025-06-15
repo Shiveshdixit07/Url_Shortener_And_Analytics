@@ -79,7 +79,6 @@ export default function ShortenPage() {
           {/* Header */}
           <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
             <h1 className="text-2xl font-bold text-white mb-2">URL Shortened Successfully!</h1>
-            <p className="text-gray-300">{data.message}</p>
           </div>
 
           {/* Original URL */}
