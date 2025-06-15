@@ -193,7 +193,7 @@ export default function Home() {
               </button>
             </div>
             <p className="text-gray-300 mb-6 max-w-2xl text-base md:text-lg font-light leading-relaxed">
-              Get detailed insights about your shortened URLs. Monitor clicks, geographic data, and referral sources.
+              Get detailed insights about your shortened URLs. 
             </p>
             
             <form
