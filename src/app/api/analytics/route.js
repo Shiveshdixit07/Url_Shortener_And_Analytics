@@ -1,11 +1,12 @@
 import { NextResponse } from "next/server";
 import Url from "../../../../models/postModel";
+import connectDB from "../../../../config/database";
 
+export const dynamic = 'force-dynamic';
 
 export async function POST(request) {
   try {
-   
-
+    await connectDB();
     const data = await request.formData();
     const url = data.get("url");
 

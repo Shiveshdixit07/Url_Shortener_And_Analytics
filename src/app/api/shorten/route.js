@@ -2,9 +2,13 @@ import { NextResponse } from "next/server";
 import shortid from "shortid";
 import Url from "../../../../models/postModel";
 import { headers } from "next/headers";
+import connectDB from "../../../../config/database";
+
+export const dynamic = 'force-dynamic';
 
 export async function GET(request) {
   try {
+    await connectDB();
     const url = request.nextUrl.searchParams.get('url');
 
     if (!url || url.trim() === "") {

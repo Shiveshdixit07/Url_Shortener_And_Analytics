@@ -1,9 +1,29 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 
 export default function ShortenPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-gradient-to-br from-gray-900 to-gray-800 p-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="bg-white/10 backdrop-blur-lg rounded-xl p-8 text-center text-white">
+            <div className="animate-pulse flex flex-col items-center">
+              <div className="h-8 w-8 bg-blue-500 rounded-full mb-4"></div>
+              <div className="h-4 w-32 bg-blue-500/50 rounded mb-2"></div>
+              <div className="h-4 w-48 bg-blue-500/50 rounded"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    }>
+      <ShortenPageContent />
+    </Suspense>
+  );
+}
+
+function ShortenPageContent() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [data, setData] = useState(null);
