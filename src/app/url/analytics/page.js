@@ -119,11 +119,11 @@ function AnalyticsPageContent() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
                 <div className="text-gray-400 text-sm mb-1">Generated On</div>
-                <div className="text-white text-xl font-semibold">{analytics.Generated_On}</div>
+                <div className="text-white text-xl font-semibold">{new Date(analytics.Generated_On).toLocaleString()}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
                 <div className="text-gray-400 text-sm mb-1">Last Visited On</div>
-                <div className="text-white text-xl font-semibold">{analytics.Last_Visited_On}</div>
+                <div className="text-white text-xl font-semibold">{new Date(analytics.Last_Visited_On).toLocaleString()}</div>
               </div>
               <div className="bg-white/10 backdrop-blur-lg rounded-xl p-6">
                 <div className="text-gray-400 text-sm mb-1">Total Visits</div>
@@ -147,7 +147,7 @@ function AnalyticsPageContent() {
                             <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd" />
                           </svg>
                         </div>
-                        <span className="text-gray-300">{visit}</span>
+                        <span className="text-gray-300">{new Date(visit).toLocaleString()}</span>
                       </div>
                     ))}
                   </div>

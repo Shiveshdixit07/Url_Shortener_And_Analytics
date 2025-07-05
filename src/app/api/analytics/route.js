@@ -24,11 +24,11 @@ export async function POST(request) {
       }, { status: 404 });
     }
 
-    const history = result.history.map(v => new Date(v.timeStamp).toLocaleString());
+    const history = result.history.map(v => new Date(v.timeStamp).toISOString());
 
     const response = {
-      Generated_On: result.createdAt.toLocaleString(),
-      Last_Visited_On: result.updatedAt.toLocaleString(),
+      Generated_On: result.createdAt.toISOString(),
+      Last_Visited_On: result.updatedAt.toISOString(),
       Number_Of_Visits: result.history.length,
       History_Of_Visits: history,
     };
